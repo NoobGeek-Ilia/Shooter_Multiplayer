@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Move(float moveSpeed)
     {
-        rb.velocity = new Vector2(InputController.InputInfoX * moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(InputKeyboard.InputInfoX * moveSpeed, rb.velocity.y);
     }
 
     void Jump(float force)

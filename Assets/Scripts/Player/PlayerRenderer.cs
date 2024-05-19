@@ -1,16 +1,24 @@
+using UniRx;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class PlayerRenderer : MonoBehaviour
 {
     private SpriteRenderer _playerSprite;
+
     private void Awake()
     {
         _playerSprite = GetComponent<SpriteRenderer>();
-        InputController.OnLastButtPressed += Flip;
+        InputMouse.OnCursorRightOfCenter += Flip;
     }
 
-    public void Flip(KeyCode key)
+    private void OnDestroy()
     {
-        _playerSprite.flipX = (key == KeyCode.D);
+        InputMouse.OnCursorRightOfCenter -= Flip;
+    }
+
+    public void Flip(bool flip)
+    {
+        _playerSprite.flipX = flip;
     }
 }

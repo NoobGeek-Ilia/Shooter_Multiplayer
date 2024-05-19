@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class InputController : MonoBehaviour
+public class InputKeyboard : MonoBehaviour
 {
     private static KeyCode LastButtPressed;
     private static KeyCode CurrentButtPressed;
