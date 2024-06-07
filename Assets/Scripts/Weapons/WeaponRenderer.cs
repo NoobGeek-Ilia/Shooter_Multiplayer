@@ -1,7 +1,7 @@
 ﻿using UniRx;
 using UnityEngine;
 
-class WeaponRenderer : MonoBehaviour
+public class WeaponRenderer : MonoBehaviour
 {
     private SpriteRenderer _weaponSprite;
     private CompositeDisposable _disposables = new CompositeDisposable();

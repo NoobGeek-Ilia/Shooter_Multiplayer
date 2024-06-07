@@ -4,7 +4,7 @@ using UnityEngine;
 public class WeaponScriptable : ScriptableObject
 {
     public WeaponType Type;
-    public string Name;
-    public string Description;
+    public BulletsScriptable Bullet;
     public Sprite Sprite;
+    public float ShootSpeed;
 }
